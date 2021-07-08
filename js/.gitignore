@@ -81,7 +81,6 @@ yarn.lock
 # compilation targets
 doc
 dist
-targets
 
 # test data files
 test/data/**/*.json
