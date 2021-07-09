@@ -21,12 +21,14 @@ export interface RecordBatch<T extends {
     slice(begin?: number, end?: number): RecordBatch<T>;
     clone(data: Data<Struct<T>>, children?: Vector[]): RecordBatch<T>;
 }
+// @ts-ignore
 export declare class RecordBatch<T extends {
     [key: string]: DataType;
 } = any> extends StructVector<T> implements Clonable<RecordBatch<T>>, Sliceable<RecordBatch<T>>, Applicative<Struct<T>, Table<T>> {
     static from<T extends {
         [key: string]: DataType;
     } = any, TNull = any>(options: VectorBuilderOptions<Struct<T>, TNull>): Table<T>;
+    // @ts-ignore
     static from<T extends {
         [key: string]: DataType;
     } = any, TNull = any>(options: VectorBuilderOptionsAsync<Struct<T>, TNull>): Promise<Table<T>>;

@@ -341,7 +341,7 @@ abstract class RecordBatchReaderImpl<T extends { [key: string]: DataType } = any
     public reset(schema?: Schema<T> | null) {
         this._dictionaryIndex = 0;
         this._recordBatchIndex = 0;
-        this.schema = <any> schema;
+        this.schema = schema as any;
         this.dictionaries = new Map();
         return this;
     }

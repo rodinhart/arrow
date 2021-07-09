@@ -233,6 +233,7 @@ interface AsyncRecordBatchFileReaderImpl<T extends {
 declare abstract class RecordBatchReaderImpl<T extends {
     [key: string]: DataType;
 } = any> implements RecordBatchReaderImpl<T> {
+    // ts-ignore
     schema: Schema;
     closed: boolean;
     autoDestroy: boolean;
