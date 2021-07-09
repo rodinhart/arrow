@@ -234,7 +234,7 @@ declare abstract class RecordBatchReaderImpl<T extends {
     [key: string]: DataType;
 } = any> implements RecordBatchReaderImpl<T> {
     // ts-ignore
-    schema: Schema;
+    schema: Schema<T>;
     closed: boolean;
     autoDestroy: boolean;
     dictionaries: Map<number, Vector>;
